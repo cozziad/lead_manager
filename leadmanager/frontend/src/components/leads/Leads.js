@@ -31,11 +31,11 @@ export class Leads extends Component {
                     <tbody>
                         {this.props.leads.map(lead => (
                             <tr key={lead.id}>
-                                <td>(lead.id)</td>
-                                <td>(lead.name)</td>
-                                <td>(lead.email)</td>
-                                <td>(lead.message)</td>
-                                <td><button className="btn btn-danger btn-sm" onClick={this.props.deleteLead.bind(this, lead.id)}>Delete</button></td>
+                                <td>{lead.id}</td>
+                                <td>{lead.name}</td>
+                                <td>{lead.email}</td>
+                                <td>{lead.message}</td>
+                                <td><button className="btn btn-danger btn-sm" onClick={this.props.deleteLead.bind(this, lead.id)}>{" "}Delete</button></td>
                             </tr>
                         ))}
                     </tbody>
