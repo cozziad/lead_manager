@@ -22,6 +22,11 @@ export class Form extends Component {
         const { name, email, message } = this.state;
         const lead = { name, email, message };
         this.props.addLead(lead);
+        this.setState({
+            name: '',
+            email: '',
+            message: '',
+        });
     }
 
     render() {
@@ -63,7 +68,7 @@ export class Form extends Component {
                     <div className="form-group">
                         <button type="submit" className="btn btn-primary">
                             Submit
-            </button>
+                        </button>
                     </div>
                 </form>
             </div>
